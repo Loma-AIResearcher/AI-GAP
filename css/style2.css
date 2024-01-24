@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/* Keyframes */
+
+@keyframes qodef-animate-overlay-text {
+  0%, 100% { clip-path: inset(0 100% 0 0); -webkit-clip-path: inset(0 100% 0 0); }
+  50% { clip-path: inset(0 0 0 0); -webkit-clip-path: inset(0 0 0 0); }
+ 
+}
+
+
+
+
+:root {
+  --qode-main-color: #000;
+  --qode-header-light-color: #fff;
+  --qode-header-light-hover-color: #ee2852;
+  --qode-header-dark-color: #000;
+  --qode-header-dark-hover-color: #ee2852;
+}
+
+
+
+/* Resetting some default styles */
+
+/* Header styles */
+.qodef-h1, h1 {
+  font-family: 'Arsenal', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #000;
+  font-size: 60px;
+  line-height: 1.13em;
+  margin: 25px 0;
+}
+#qodef-page-spinner.qodef-layout--clock .qodef-m-clock {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    animation: qode-clock 8s infinite steps(8);
+}
+
+#qodef-page-spinner.qodef-layout--clock .qodef-m-clock-item {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    /* Add any additional styles for clock items as needed */
+}
+
+/* General styles for page spinner */
+#qodef-page-spinner {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+#qodef-page-spinner .qodef-m-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */ 
+    background-color: var(--qode-main-color);
+
+    
+    background-size: cover;
+}
+
+#qodef-page-spinner .qodef-m-spinner {
+    position: relative;
+    /* Add any additional styles for the spinner container as needed */
+}
+
+/* Styles for Atom layout of the page spinner */
+#qodef-page-spinner.qodef-layout--atom .qodef-m-atom {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+}
+
+/* ... (Repeat styles for other Atom layout items as needed) */
+
+/* Additional styles for specific elements in the side area */
+
+
+/* ... (Repeat styles for other specific elements in the side area as needed) */
+
+
+#qodef-page-spinner {
+    &.qodef-layout--clock {
+      .qodef-m-clock-item:before {
+        content: '';
+        position: absolute;
+        height: 18.31501832px;
+        width: 18.31501832px;
+        background: currentColor;
+        border-radius: 50%;
+      }
+  
+
+    }
+  
+    &.qodef-layout--cube {
+      .qodef-m-cube {
+        width: 60px;
+        height: 60px;
+        margin: -30px 0 0 -30px;
+        background-color: currentColor;
+        animation: qode-cube 0.2s infinite ease-in-out;
+      }
+    }
+  
+    &.qodef-layout--double-pulse {
+      .qodef-m-pulses {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin: -20px 0 0 -20px;
+      }
+  
+      .qodef-m-pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: currentColor;
+        border-radius: 50%;
+        opacity: 0.6;
+        animation: qode-double-pulse 2s infinite ease-in-out;
+  
+        &.qodef-pulse--2 {
+          animation-delay: -1s;
+        }
+      }
+    }
+  
+    &.qodef-layout--esmee {
+      &.qodef--init .qodef-m-esmee {
+        opacity: 1;
+      }
+  
+      &.qodef--animate .qodef-m-text.qodef--copy {
+        animation: qodef-animate-overlay-text 4.32s cubic-bezier(.25, .46, .45, .94) infinite 0.64s;
+      }
+  
+      .qodef-m-esmee {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+  
+        .qodef-m-text {
+          font-family: Arsenal, sans-serif;
+          font-size: 150px;
+          line-height: 1em;
+          font-weight: 400;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: transparent;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;
+  
+          @media only screen and (max-width: 680px) {
+            font-size: 75px;
+          }
+  
+          &:not(.qodef--copy) {
+            white-space: nowrap;
+          }
+  
+          &.qodef--copy {
+            position: absolute;
+            clip-path: inset(0 100% 0 0);
+            -webkit-clip-path: inset(0 100% 0 0);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #FFD700;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    
+     
+            .qodef-m-char {
+              display: inline-block;
+              opacity: 0;
+              transform: translateX(-60px);
+              transition: opacity 1s ease-out, transform 1s ease-out;
+  
+              &.qodef-m-empty-char {
+                white-space: pre;
+              }
+  
+              &.qodef--appeared,
+              .elementor-editor-active & {
+                opacity: 1; 
+                transform: translateX(0);
+              }
+            }
+          }
+        }
+      }
+    }
+  
+  }
+  
