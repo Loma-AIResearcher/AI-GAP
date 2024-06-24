@@ -23,15 +23,15 @@ This project demonstrates a simple neural network implemented using PyTorch to c
 ### Installing
 
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/yourusername/simple-mnist-pytorch.git
    cd simple-mnist-pytorch
-   \`\`\`
+   ```
 
 2. Install the required packages:
-   \`\`\`bash
+   ```bash
    pip install torch torchvision
-   \`\`\`
+   ```
 
 ## Usage
 
@@ -39,17 +39,17 @@ This project demonstrates a simple neural network implemented using PyTorch to c
 
 You can run the training script using the following command:
 
-\`\`\`bash
+```bash
 python scripts/train.py
-\`\`\`
+```
 
 ### Running the Jupyter Notebook
 
-If you prefer to use Jupyter Notebook, you can find the notebook in the \`notebooks/\` directory:
+If you prefer to use Jupyter Notebook, you can find the notebook in the `notebooks/` directory:
 
-\`\`\`bash
+```bash
 jupyter notebook notebooks/simple_mnist_pytorch.ipynb
-\`\`\`
+```
 
 ## Training
 
