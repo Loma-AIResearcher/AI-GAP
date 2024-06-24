@@ -4,7 +4,7 @@ This project demonstrates a simple neural network implemented using PyTorch to c
 
 ## Project Structure
 
-- \`data/\`: Directory for storing the MNIST data.
+- `data/`: Directory for storing the MNIST data.
 - \`models/\`: Directory for saving trained models.
 - \`notebooks/\`: Directory for Jupyter notebooks.
 - \`scripts/\`: Directory for Python scripts.
