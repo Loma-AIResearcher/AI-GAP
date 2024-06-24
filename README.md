@@ -24,8 +24,8 @@ This project demonstrates a simple neural network implemented using PyTorch to c
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/simple-mnist-pytorch.git
-   cd simple-mnist-pytorch
+   git clone https://github.com/Loma-AIResearcher/TORCH_MNIST.git
+   cd TORCH_MNIST
    ```
 
 2. Install the required packages:
@@ -48,12 +48,12 @@ python scripts/train.py
 If you prefer to use Jupyter Notebook, you can find the notebook in the `notebooks/` directory:
 
 ```bash
-jupyter notebook notebooks/simple_mnist_pytorch.ipynb
+jupyter notebook notebooks/TORCH_MNIST.ipynb
 ```
 
 ## Training
 
-The neural network is trained on the MNIST dataset for 2 epochs. The training process prints the loss every 100 mini-batches. After training, the model is saved in the \`models/\` directory.
+The neural network is trained on the MNIST dataset for 2 epochs. The training process prints the loss every 100 mini-batches. After training, the model is saved in the `models/` directory.
 
 ## Evaluation
 
